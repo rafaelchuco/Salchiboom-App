@@ -10,9 +10,9 @@ Este es una aplicación de entrega de comida llamada **SalchiBoom**. Especializa
 <table>
   <thead>
     <tr>
-      <th>**Figma**</th>
-      <th>**Oracle**</th>
-      <th>**MySQL Workbench**</th>
+      <th>Figma</th>
+      <th>Oracle</th>
+      <th>MySQL Workbench</th>
     </tr>
   </thead>
   <tbody>
