@@ -8,21 +8,21 @@
   - [📄Descripción](#descripción)
   - [👨‍💻Tecnologías utilizadas](#tecnologías-utilizadas)
   - [Entidades](#entidades)
-      - [salchiboom](#salchiboom-1)
-      - [Usuarios](#usuarios)
-      - [Repartidores](#repartidores)
-      - [Productos](#productos)
-      - [Categoria](#categoria)
-      - [Pedidos](#pedidos)
-      - [Carrito](#carrito)
-      - [Metodo\_Pago](#metodo_pago)
-      - [Historial\_Pago](#historial_pago)
-      - [Reseña\_Producto](#reseña_producto)
-      - [Direccion\_Envio](#direccion_envio)
-      - [Historial\_Pedido](#historial_pedido)
-      - [Cupones](#cupones)
-      - [Restaurantes](#restaurantes)
-      - [Inventario](#inventario)
+        - [salchiboom](#salchiboom-1)
+        - [Usuarios](#usuarios)
+        - [Repartidores](#repartidores)
+        - [Productos](#productos)
+        - [Categoria](#categoria)
+        - [Pedidos](#pedidos)
+        - [Carrito](#carrito)
+        - [Metodo\_Pago](#metodo_pago)
+        - [Historial\_Pago](#historial_pago)
+        - [Reseña\_Producto](#reseña_producto)
+        - [Direccion\_Envio](#direccion_envio)
+        - [Historial\_Pedido](#historial_pedido)
+        - [Cupones](#cupones)
+        - [Restaurantes](#restaurantes)
+        - [Inventario](#inventario)
 
 ## 📄Descripción
 Este es una aplicación de entrega de comida llamada **SalchiBoom**. Especializada en ofrecer hamburguesas de alta calidad. Nuestra misión es proporcionar **experiencias sabrosas** y **momentos felices** para nuestros usuarios, con un solo clic.
@@ -50,7 +50,7 @@ Este es una aplicación de entrega de comida llamada **SalchiBoom**. Especializa
 </table>
 
 ## Entidades
-#### salchiboom
+##### salchiboom
 | Attribute         | Type          |
 | ----------------- | ------------- |
 |                   |               |
@@ -58,7 +58,7 @@ Este es una aplicación de entrega de comida llamada **SalchiBoom**. Especializa
 |                   |               |
 |                   |               |
 
-#### Usuarios
+##### Usuarios
 | Attribute         | Type          |
 | ----------------- | ------------- |
 |                   |               |
@@ -66,7 +66,7 @@ Este es una aplicación de entrega de comida llamada **SalchiBoom**. Especializa
 |                   |               |
 |                   |               |
 
-#### Repartidores
+##### Repartidores
 | Attribute         | Type          |
 | ----------------- | ------------- |
 |                   |               |
@@ -74,7 +74,7 @@ Este es una aplicación de entrega de comida llamada **SalchiBoom**. Especializa
 |                   |               |
 |                   |               |
 
-#### Productos
+##### Productos
 | Attribute         | Type          |
 | ----------------- | ------------- |
 |                   |               |
@@ -82,7 +82,7 @@ Este es una aplicación de entrega de comida llamada **SalchiBoom**. Especializa
 |                   |               |
 |                   |               |
 
-#### Categoria
+##### Categoria
 | Attribute         | Type          |
 | ----------------- | ------------- |
 |                   |               |
@@ -90,7 +90,7 @@ Este es una aplicación de entrega de comida llamada **SalchiBoom**. Especializa
 |                   |               |
 |                   |               |
 
-#### Pedidos
+##### Pedidos
 | Attribute         | Type          |
 | ----------------- | ------------- |
 |                   |               |
@@ -98,7 +98,7 @@ Este es una aplicación de entrega de comida llamada **SalchiBoom**. Especializa
 |                   |               |
 |                   |               |
 
-#### Carrito
+##### Carrito
 | Attribute         | Type          |
 | ----------------- | ------------- |
 |                   |               |
@@ -106,7 +106,7 @@ Este es una aplicación de entrega de comida llamada **SalchiBoom**. Especializa
 |                   |               |
 |                   |               |
 
-#### Metodo_Pago
+##### Metodo_Pago
 | Attribute         | Type          |
 | ----------------- | ------------- |
 |                   |               |
@@ -114,7 +114,7 @@ Este es una aplicación de entrega de comida llamada **SalchiBoom**. Especializa
 |                   |               |
 |                   |               |
 
-#### Historial_Pago
+##### Historial_Pago
 | Attribute         | Type          |
 | ----------------- | ------------- |
 |                   |               |
@@ -122,7 +122,7 @@ Este es una aplicación de entrega de comida llamada **SalchiBoom**. Especializa
 |                   |               |
 |                   |               |
 
-#### Reseña_Producto
+##### Reseña_Producto
 | Attribute         | Type          |
 | ----------------- | ------------- |
 |                   |               |
@@ -130,7 +130,7 @@ Este es una aplicación de entrega de comida llamada **SalchiBoom**. Especializa
 |                   |               |
 |                   |               |
 
-#### Direccion_Envio
+##### Direccion_Envio
 | Attribute         | Type          |
 | ----------------- | ------------- |
 |                   |               |
@@ -138,7 +138,7 @@ Este es una aplicación de entrega de comida llamada **SalchiBoom**. Especializa
 |                   |               |
 |                   |               |
 
-#### Historial_Pedido
+##### Historial_Pedido
 | Attribute         | Type          |
 | ----------------- | ------------- |
 |                   |               |
@@ -146,7 +146,7 @@ Este es una aplicación de entrega de comida llamada **SalchiBoom**. Especializa
 |                   |               |
 |                   |               |
 
-#### Cupones
+##### Cupones
 | Attribute         | Type          |
 | ----------------- | ------------- |
 |                   |               |
@@ -154,7 +154,7 @@ Este es una aplicación de entrega de comida llamada **SalchiBoom**. Especializa
 |                   |               |
 |                   |               |
 
-#### Restaurantes
+##### Restaurantes
 | Attribute         | Type          |
 | ----------------- | ------------- |
 |                   |               |
@@ -162,11 +162,8 @@ Este es una aplicación de entrega de comida llamada **SalchiBoom**. Especializa
 |                   |               |
 |                   |               |
 
-#### Inventario
+##### Inventario
 | Attribute         | Type          |
 | ----------------- | ------------- |
-|                   |        
-|                   |               |    |   
-|                           |
-       |    |   
-|                           |
+|                   |               |
+|                   |               |
