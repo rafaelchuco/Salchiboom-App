@@ -44,9 +44,6 @@ Este es una aplicación de entrega de comida llamada **SalchiBoom**. Especializa
         <img src="https://m.media-amazon.com/images/I/41QodfboFdL.png"width="100%" />
     </td>
     <td>
-        <img src="https://tse2.mm.bing.net/th?id=OIP.NI94miDnt29EtYfOyUGBUQHaLG&pid=Api&P=0&h=180"width="100%" />
-    </td>
-    <td>
         <img src="https://wizcase.com/wp-content/uploads/2022/02/MySQL-Workbench-logo.png"width="100%" />
     </td>
   </tbody>
