@@ -65,6 +65,7 @@ Desarrollar una aplicación móvil que permita a los usuarios realizar pedidos d
 ## Tablas y Atributos
 
 #### Usuarios
+
 | Attribute         | Type          |
 | ----------------- | ------------- |
 | id_usuario        |  INT          |
@@ -74,6 +75,7 @@ Desarrollar una aplicación móvil que permita a los usuarios realizar pedidos d
 | Dirección         |  Text         |
 
 #### Repartidores
+
 | Attribute         | Type          |
 | ----------------- | ------------- |
 | Id_repartidor     |     INT       |
@@ -81,6 +83,7 @@ Desarrollar una aplicación móvil que permita a los usuarios realizar pedidos d
 | estatus           |     Enum      |
 
 #### Productos
+
 | Attribute         | Type          |
 | ----------------- | ------------- |
 | id_producto       | INT           |
@@ -90,12 +93,14 @@ Desarrollar una aplicación móvil que permita a los usuarios realizar pedidos d
 | id_categoria      | INT           |
 
 #### Categoria
+
 | Attribute         | Type          |
 | ----------------- | ------------- |
 | id_categoria      | INT           |
 | Nombre            |  Charchar(25) |
 
 #### Pedidos
+
 | Attribute         | Type          |
 | ----------------- | ------------- |
 | id_pedido         |     INT       |
@@ -104,6 +109,7 @@ Desarrollar una aplicación móvil que permita a los usuarios realizar pedidos d
 | total             |  Decimal      |
 
 #### Carrito
+
 | Attribute         | Type          |
 | ----------------- | ------------- |
 | id_carrito        |     INT       |
@@ -112,12 +118,14 @@ Desarrollar una aplicación móvil que permita a los usuarios realizar pedidos d
 | Cantidad          |     INT       |
 
 #### Metodo_Pago
+
 | Attribute         | Type          |
 | ----------------- | ------------- |
 | Id_método_pago    |      INT      |
 | Nombre            | Varchar(25)  |
 
 #### Historial_Pago
+
 | Attribute         | Type          |
 | ----------------- | ------------- |
 | id_pago           |    INT        |
@@ -126,6 +134,7 @@ Desarrollar una aplicación móvil que permita a los usuarios realizar pedidos d
 | fecha_pago        |    Date       |
 
 #### Reseña_Producto
+
 | Attribute         | Type          |
 | ----------------- | ------------- |
 | id_reseña         |     INT       |
@@ -135,6 +144,7 @@ Desarrollar una aplicación móvil que permita a los usuarios realizar pedidos d
 | Calificacion      |     INT       |
 
 #### Direccion_Envio
+
 | Attribute         | Type          |
 | ----------------- | ------------- |
 | id_direccion      |  INT          |
@@ -145,6 +155,7 @@ Desarrollar una aplicación móvil que permita a los usuarios realizar pedidos d
 
 
 #### Historial_Pedido
+
 | Attribute         | Type          |
 | ----------------- | ------------- |
 | id_historial      |    INT        |
@@ -152,6 +163,7 @@ Desarrollar una aplicación móvil que permita a los usuarios realizar pedidos d
 | estatus           |    INT        |
 
 #### Cupones
+
 | Attribute         | Type          |
 | ----------------- | ------------- |
 | id_usuario        |  INT          |
@@ -161,6 +173,7 @@ Desarrollar una aplicación móvil que permita a los usuarios realizar pedidos d
 | Dirección         |  Text         |
 
 #### Restaurantes
+
 | Attribute         | Type          |
 | ----------------- | ------------- |
 |  id_restaurante   |  INT          |
@@ -168,6 +181,7 @@ Desarrollar una aplicación móvil que permita a los usuarios realizar pedidos d
 |  Descripción      |  clob         |
 
 #### Inventario
+
 | Attribute         | Type          |
 | ----------------- | ------------- |
 | id_inventario     |     INT       |
@@ -177,6 +191,7 @@ Desarrollar una aplicación móvil que permita a los usuarios realizar pedidos d
 ## Relaciones entre tablas
 
 - **Usuarios** esta relacionada con:
+    - 
 
 - **Repartidores** esta relacionada con:
 
@@ -205,3 +220,5 @@ Desarrollar una aplicación móvil que permita a los usuarios realizar pedidos d
 - **Inventario** esta relacionada con:
 
 ## Diagrama Entidad-Relación
+![der](der.pdf)
+
