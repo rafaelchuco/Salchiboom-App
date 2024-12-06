@@ -13,14 +13,14 @@
       - [Repartidores](#repartidores)
       - [Restaurantes\_has\_Productos](#restaurantes_has_productos)
       - [Productos](#productos)
-      - [Categoria](#categoria)
+      - [Pedidos\_has\_usuarios](#pedidos_has_usuarios)
       - [Pedidos](#pedidos)
       - [Carrito](#carrito)
       - [Metodo\_Pago](#metodo_pago)
       - [Historial\_Pago](#historial_pago)
       - [Reseña\_Producto](#reseña_producto)
       - [Direccion\_Envio](#direccion_envio)
-      - [Historial\_Pedido](#historial_pedido)
+      - [Especificación\_Producto](#especificación_producto)
       - [Cupones](#cupones)
       - [Restaurantes](#restaurantes)
       - [Inventario](#inventario)
@@ -99,19 +99,17 @@ Desarrollar una aplicación móvil que permita a los usuarios realizar pedidos d
 | Precio            | Decimal(10, 2)|
 | Descripción       | Text          |
 
-#### Categoria
+#### Pedidos_has_usuarios
 
 | Attribute         | Type          |
 | ----------------- | ------------- |
-| id_categoria      | INT           |
-| Nombre            |  Charchar(25) |
+| id_historial      | INT           |
 
 #### Pedidos
 
 | Attribute         | Type          |
 | ----------------- | ------------- |
 | id_pedido         |     INT       |
-| id_usuario        |     INT       |
 | fecha_pedido      |     Date      |
 | total             |  Decimal      |
 
@@ -154,13 +152,11 @@ Desarrollar una aplicación móvil que permita a los usuarios realizar pedidos d
 | estado            |  Varchar(15)  |
 
 
-#### Historial_Pedido
+#### Especificación_Producto
 
 | Attribute         | Type          |
 | ----------------- | ------------- |
-| id_historial      |    INT        |
-| id_pedido         |    INT        |
-| estatus           |    INT        |
+| valor             |Varchar(45)    |
 
 #### Cupones
 
@@ -200,11 +196,11 @@ Desarrollar una aplicación móvil que permita a los usuarios realizar pedidos d
 | ----------------- | ------------- |
 | id_registro       |     INT       |
 | id_usuario        |     INT       |
-| Nombre            |    Varchar(25)    |
-| correo            |    Varchar(25)    |
-| contraseña        |    Varchar(25)    |
-| direccion         |    Varchar(45)    |
-| telefono          |    Varchar(15)    |
+| correo            |  Varchar(25)  |
+| contraseña        |  Varchar(25)  |
+| direccion         |  Varchar(45)  |
+| telefono          |  Varchar(15)  |
+| Nombre            |  Varchar(25)  |
 
 
 
@@ -217,7 +213,7 @@ Desarrollar una aplicación móvil que permita a los usuarios realizar pedidos d
   - Repartidores
   - Registro
   - Reseña_Producto
-  - Historial_pedido
+  - Pedidos_has_usuarios
 
 - **Repartidores** esta relacionada con:
   - Usuarios
@@ -267,4 +263,6 @@ Desarrollar una aplicación móvil que permita a los usuarios realizar pedidos d
 ## Diagrama Entidad-Relación
 
 ![der](./img-logo/der_SB.jpg)
+
+
 
