@@ -730,7 +730,6 @@ WHERE EXISTS (
 
 -- 23. Uso de CONNECT BY para Consultas Jerárquicas
 
--- *Nota:* Este es un ejemplo genérico. Asegúrate de tener una estructura jerárquica en tu tabla.
 SELECT LEVEL, nombre_restaurante, id_restaurante
 FROM Restaurantes
 START WITH id_restaurante = 1
@@ -738,8 +737,8 @@ CONNECT BY PRIOR id_restaurante = parent_id_restaurante;
 
 
 -- 24. Uso de CTE Recursivas
-
 -- *Nota:* Oracle soporta CTEs recursivas usando WITH y CONNECT BY. Ajusta según tu estructura.
+
 WITH Categoria_Hierarchy AS (
     SELECT id_categoria, nombre_categoria, NULL AS parent_id
     FROM Categoria
