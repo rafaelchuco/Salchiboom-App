@@ -72,32 +72,32 @@ Desarrollar una aplicación móvil que permita a los usuarios realizar pedidos d
 
 | Attribute         | Type          |
 | ----------------- | ------------- |
-| id_usuario        |  INT          |
-| Nombre            | Varchar(25)   |
-| Email             | Varchar(25)   |
+| id_usuario        |  number       |
+| Nombre            |Varchar2(25)   |
+| Email             |Varchar2(25)   |
 | Dirección         |  Text         |
-| Teléfono          | Varchar(25)   |
+| Teléfono          |Varchar2(25)   |
 
 #### Repartidores
 
 | Attribute         | Type          |
 | ----------------- | ------------- |
-| Id_repartidor     |     INT       |
-| estatus           |     Enum      |
+| Id_repartidor     |     number    |
+| estatus           |     NUMBER  |
 
 #### Restaurantes_has_Productos
 
 | Attribute         | Type          |
 | ----------------- | ------------- |
-|id_categoria       |  Varchar(45)  |
-|Nombre             |  Varchar(45)  |
+|id_categoria       | Varchar2(45)  |
+|Nombre             | Varchar2(45)  |
 
 #### Productos
 
 | Attribute         | Type          |
 | ----------------- | ------------- |
-| id_producto       | INT           |
-| Nombre            | Varchar(10)   |
+| id_producto       | number        |
+| Nombre            |Varchar2(10)   |
 | Precio            | Decimal(10, 2)|
 | Descripción       | Text          |
 
@@ -105,13 +105,13 @@ Desarrollar una aplicación móvil que permita a los usuarios realizar pedidos d
 
 | Attribute         | Type          |
 | ----------------- | ------------- |
-| id_historial      | INT           |
+| id_historial      | number        |
 
 #### Pedidos
 
 | Attribute         | Type          |
 | ----------------- | ------------- |
-| id_pedido         |     INT       |
+| id_pedido         |     number    |
 | fecha_pedido      |     Date      |
 | total             |  Decimal      |
 
@@ -119,39 +119,39 @@ Desarrollar una aplicación móvil que permita a los usuarios realizar pedidos d
 
 | Attribute         | Type          |
 | ----------------- | ------------- |
-| id_carrito        |     INT       |
-| Cantidad          |     INT       |
+| id_carrito        |     number    |
+| Cantidad          |     number    |
 
 #### Metodo_Pago
 
 | Attribute         | Type          |
 | ----------------- | ------------- |
-| Id_método_pago    |      INT      |
-| Nombre            | Varchar(25)  |
+| Id_método_pago    |      number   |
+| Nombre            |Varchar2(25)   |
 
 #### Historial_Pago
 
 | Attribute         | Type          |
 | ----------------- | ------------- |
-| id_pago           |    INT        |
+| id_pago           |    number     |
 | fecha_pago        |    Date       |
 
 #### Reseña_Producto
 
 | Attribute         | Type          |
 | ----------------- | ------------- |
-| id_reseña         |     INT       |
-| comentario        |     Text      |
-| Calificacion      |     INT       |
+| id_reseña         |     number    |
+| comentario        |     CLOB      |
+| Calificacion      |     number    |
 
 #### Direccion_Envio
 
 | Attribute         | Type          |
 | ----------------- | ------------- |
-| id_direccion      |  INT          |
-| direccion         |  Varchar(25)  |
-| ciudad            |  Varchar(15)  |
-| estado            |  Varchar(15)  |
+| id_direccion      |  number       |
+| direccion         | Varchar2(25)  |
+| ciudad            | Varchar2(15)  |
+| estado            | Varchar2(15)  |
 
 
 #### Especificación_Producto
@@ -164,45 +164,45 @@ Desarrollar una aplicación móvil que permita a los usuarios realizar pedidos d
 
 | Attribute         | Type          |
 | ----------------- | ------------- |
-| id_cupon          |  INT          |
-| codigo            | Varchar(25)   |
-| descuento         | Varchar(25)   |
-| fecha_vencimiento | Varchar(25)   |
+| id_cupon          |  number       |
+| codigo            |Varchar2(25)   |
+| descuento         |Varchar2(25)   |
+| fecha_vencimiento |Varchar2(25)   |
 
 #### Restaurantes
 
 | Attribute         | Type          |
 | ----------------- | ------------- |
-|  id_restaurante   |  INT          |
-|  Nombre           |  Varchar(10)  |
+|  id_restaurante   |  number       |
+|  Nombre           | Varchar2(10)  |
 |  Descripción      |  clob         |
 
 #### Inventario
 
 | Attribute         | Type          |
 | ----------------- | ------------- |
-| id_inventario     |     INT       |
-| Cantidad          |     INT       |
+| id_inventario     |     number    |
+| Cantidad          |     number    |
 
 #### Especificaciones
 
 | Attribute         | Type          |
 | ----------------- | ------------- |
-| id_especificacion |     INT       |
-| Nombre            |     INT       |
-| Descripción       |     INT       |
+| id_especificacion |     number    |
+| Nombre            |     number    |
+| Descripción       |     number    |
 
 #### Registro
 
 | Attribute         | Type          |
 | ----------------- | ------------- |
-| id_registro       |     INT       |
-| id_usuario        |     INT       |
-| correo            |  Varchar(25)  |
-| contraseña        |  Varchar(25)  |
-| direccion         |  Varchar(45)  |
-| telefono          |  Varchar(15)  |
-| Nombre            |  Varchar(25)  |
+| id_registro       |     number    |
+| id_usuario        |     number    |
+| correo            | Varchar2(25)  |
+| contraseña        | Varchar2(25)  |
+| direccion         | Varchar2(45)  |
+| telefono          | Varchar2(15)  |
+| Nombre            | Varchar2(25)  |
 
 
 
@@ -274,9 +274,9 @@ Desarrollar una aplicación móvil que permita a los usuarios realizar pedidos d
 CREATE TABLE Registro (
     idRegistro NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     Nombre VARCHAR2(45) NOT NULL,
-    Correo VARCHAR2(100) NOT NULL,
-    Contraseña VARCHAR2(255) NOT NULL,
-    Direccion VARCHAR2(255),
+    Correo VARCHAR2(25) NOT NULL,
+    Contraseña VARCHAR2(25) NOT NULL,
+    Direccion VARCHAR2(25),
     Telefono VARCHAR2(20),
     CONSTRAINT uq_Registro_Correo UNIQUE (Correo)
 );
@@ -284,7 +284,7 @@ CREATE TABLE Registro (
 -- Tabla Especificaciones
 CREATE TABLE Especificaciones (
     idEspecificacion NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    Nombre VARCHAR2(100) NOT NULL,
+    Nombre VARCHAR2(25) NOT NULL,
     Descripcion CLOB
 );
 
@@ -292,7 +292,7 @@ CREATE TABLE Especificaciones (
 CREATE TABLE Especificacion_Producto (
     id_producto NUMBER NOT NULL,
     id_especificacion NUMBER NOT NULL,
-    Valor VARCHAR2(255),
+    Valor VARCHAR2(25),
     PRIMARY KEY (id_producto, id_especificacion),
     CONSTRAINT fk_Espec_Producto_Producto
         FOREIGN KEY (id_producto)
@@ -310,14 +310,14 @@ ALTER SESSION SET CURRENT_SCHEMA = salchiboom;
 -- Tabla Categoria
 CREATE TABLE Categoria (
     id_categoria NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    nombre_categoria VARCHAR2(100) NOT NULL,
+    nombre_categoria VARCHAR2(25) NOT NULL,
     CONSTRAINT uq_Categoria_nombre_categoria UNIQUE (nombre_categoria)
 );
 
 -- Tabla Productos
 CREATE TABLE Productos (
     id_producto NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    nombre_producto VARCHAR2(100) NOT NULL,
+    nombre_producto VARCHAR2(25) NOT NULL,
     precio NUMBER(10,2) NOT NULL,
     descripcion CLOB,
     id_categoria NUMBER NOT NULL,
@@ -334,9 +334,9 @@ CREATE TABLE Productos (
 -- Tabla Usuarios
 CREATE TABLE Usuarios (
     id_usuario NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    nombre VARCHAR2(100) NOT NULL,
-    email VARCHAR2(100) NOT NULL,
-    direccion VARCHAR2(255) NOT NULL,
+    nombre VARCHAR2(25) NOT NULL,
+    email VARCHAR2(25) NOT NULL,
+    direccion VARCHAR2(25) NOT NULL,
     telefono VARCHAR2(20) NOT NULL,
     idRegistro NUMBER,
     CONSTRAINT uq_Usuarios_email UNIQUE (email),
@@ -430,9 +430,9 @@ CREATE TABLE "Reseña_Producto" (
 CREATE TABLE Direccion_Envio (
     id_direccion NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
     id_usuario NUMBER NOT NULL,
-    direccion VARCHAR2(255) NOT NULL,
-    ciudad VARCHAR2(100) NOT NULL,
-    estado VARCHAR2(100) NOT NULL,
+    direccion VARCHAR2(25) NOT NULL,
+    ciudad VARCHAR2(25) NOT NULL,
+    estado VARCHAR2(25) NOT NULL,
     CONSTRAINT fk_DireccionEnvio_Usuarios
         FOREIGN KEY (id_usuario)
         REFERENCES Usuarios (id_usuario)
@@ -456,7 +456,7 @@ CREATE TABLE Historial_Pedido (
 CREATE TABLE Cupones (
     id_cupon NUMBER GENERATED ALWAYS AS IDENTITY,
     Usuarios_id_usuario NUMBER NOT NULL,
-    codigo VARCHAR2(50) NOT NULL,
+    codigo VARCHAR2(7) NOT NULL,
     descuento NUMBER(5,2) NOT NULL,
     fecha_vencimiento DATE NOT NULL,
     PRIMARY KEY (id_cupon, Usuarios_id_usuario),
@@ -472,7 +472,7 @@ CREATE TABLE Cupones (
 -- Tabla Restaurantes
 CREATE TABLE Restaurantes (
     id_restaurante NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-    nombre VARCHAR2(100) NOT NULL,
+    nombre VARCHAR2(25) NOT NULL,
     "Horario_atención" CLOB,
     CONSTRAINT uq_Restaurantes_nombre UNIQUE (nombre)
 );
