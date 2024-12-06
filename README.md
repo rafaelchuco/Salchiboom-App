@@ -194,7 +194,7 @@ Desarrollar una aplicación móvil que permita a los usuarios realizar pedidos d
   - Cupones
   - Repartidores
   - Registro
-  - Pedidos_has_Usuarios
+  - 
 
 - **Repartidores** esta relacionada con:
   - Usuarios
@@ -208,7 +208,7 @@ Desarrollar una aplicación móvil que permita a los usuarios realizar pedidos d
 
 - **Pedidos** esta relacionada con:
   - Historial_Pago
-  - Pedidos_has_Usuarios
+  - Historial_pedidos
 
 - **Carrito** esta relacionada con:
   - Productos
@@ -218,8 +218,8 @@ Desarrollar una aplicación móvil que permita a los usuarios realizar pedidos d
   - Historial_Pago
 
 - **Historial_Pago** esta relacionada con:
-  -Pedidos
-  - Pedidos_haz_Usuarios
+  - Pedidos
+  - Historial_Pedidos
 
 - **Reseña_Producto** esta relacionada con:
   - Productos
@@ -243,5 +243,5 @@ Desarrollar una aplicación móvil que permita a los usuarios realizar pedidos d
 
 ## Diagrama Entidad-Relación
 
-![der](./img-logo/der_SB.jpg.jpg)
+![der](./img-logo/der_SB.jpg.)
 
