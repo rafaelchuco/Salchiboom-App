@@ -230,7 +230,7 @@ Desarrollar una aplicación móvil que permita a los usuarios realizar pedidos d
 
 - **Categorías** esta relacionada con:
   - Restaurantes
-  
+  - Productos 
 
 - **Cupones** esta relacionada con:
   - Usuarios
