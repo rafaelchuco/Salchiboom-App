@@ -243,5 +243,5 @@ Desarrollar una aplicación móvil que permita a los usuarios realizar pedidos d
 
 ## Diagrama Entidad-Relación
 
-![der](./img-logo/der_SB.jpg.)
+![der](./img-logo/der_SB.jpg)
 
