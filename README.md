@@ -1,4 +1,3 @@
-
 # [🍔SalchiBoom🍔](https://www.figma.com/proto/mM4dnzuRfXycxZJnjydGVo/Mapa?node-id=45-95&node-type=frame&t=W6D1BGtgHvrUYwic-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=55%3A95)
 ![SalchiBoom](./img-logo/SalchiboomPantalla.png)
 
@@ -191,34 +190,58 @@ Desarrollar una aplicación móvil que permita a los usuarios realizar pedidos d
 ## Relaciones entre tablas
 
 - **Usuarios** esta relacionada con:
-    - 
+  - Direccion_Envio
+  - Cupones
+  - Repartidores
+  - Registro
+  - Pedidos_has_Usuarios
 
 - **Repartidores** esta relacionada con:
+  - Usuarios
 
 - **Productos** esta relacionada con:
-
-- **Categoria** esta relacionada con:
+  - Reseña_producto
+  - Especificación_Producto
+  - Inventario
+  - Carrito
+  - Categoria
 
 - **Pedidos** esta relacionada con:
+  - Historial_Pago
+  - Pedidos_has_Usuarios
 
 - **Carrito** esta relacionada con:
+  - Productos
+  - Usuarios
 
 - **Metodo_Pago** esta relacionada con:
+  - Historial_Pago
 
 - **Historial_Pago** esta relacionada con:
+  -Pedidos
+  - Pedidos_haz_Usuarios
 
 - **Reseña_Producto** esta relacionada con:
+  - Productos
+  - Usuarios
 
 - **Direccion_Envio** esta relacionada con:
+  - Usuarios
 
-- **Historial_Pedido** esta relacionada con:
+- **Categorías** esta relacionada con:
+  - Restaurantes
+  
 
 - **Cupones** esta relacionada con:
+  - Usuarios
 
 - **Restaurantes** esta relacionada con:
+  - Categoria
 
 - **Inventario** esta relacionada con:
+  - Productos
 
 ## Diagrama Entidad-Relación
-![der](./img-logo/DER.jpg)
+
+![der](./img-logo/der_SB.jpg.jpg)
 
