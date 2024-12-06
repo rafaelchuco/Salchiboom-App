@@ -11,6 +11,7 @@
   - [Tablas y Atributos](#tablas-y-atributos)
       - [Usuarios](#usuarios)
       - [Repartidores](#repartidores)
+      - [Restaurantes\_has\_Productos](#restaurantes_has_productos)
       - [Productos](#productos)
       - [Categoria](#categoria)
       - [Pedidos](#pedidos)
@@ -23,6 +24,8 @@
       - [Cupones](#cupones)
       - [Restaurantes](#restaurantes)
       - [Inventario](#inventario)
+      - [Especificaciones](#especificaciones)
+      - [Registro](#registro)
   - [Relaciones entre tablas](#relaciones-entre-tablas)
   - [Diagrama Entidad-Relación](#diagrama-entidad-relación)
 
@@ -70,16 +73,22 @@ Desarrollar una aplicación móvil que permita a los usuarios realizar pedidos d
 | id_usuario        |  INT          |
 | Nombre            | Varchar(25)   |
 | Email             | Varchar(25)   |
-| Teléfono          | Varchar(25)   |
 | Dirección         |  Text         |
+| Teléfono          | Varchar(25)   |
 
 #### Repartidores
 
 | Attribute         | Type          |
 | ----------------- | ------------- |
 | Id_repartidor     |     INT       |
-| id_usuario        |     INT       |
 | estatus           |     Enum      |
+
+#### Restaurantes_has_Productos
+
+| Attribute         | Type          |
+| ----------------- | ------------- |
+|id_categoria       |  Varchar(45)  |
+|Nombre             |  Varchar(45)  |
 
 #### Productos
 
@@ -89,7 +98,6 @@ Desarrollar una aplicación móvil que permita a los usuarios realizar pedidos d
 | Nombre            | Varchar(10)   |
 | Precio            | Decimal(10, 2)|
 | Descripción       | Text          |
-| id_categoria      | INT           |
 
 #### Categoria
 
@@ -112,8 +120,6 @@ Desarrollar una aplicación móvil que permita a los usuarios realizar pedidos d
 | Attribute         | Type          |
 | ----------------- | ------------- |
 | id_carrito        |     INT       |
-| id_usuario        |     INT       |
-| id_producto       |     INT       |
 | Cantidad          |     INT       |
 
 #### Metodo_Pago
@@ -128,8 +134,6 @@ Desarrollar una aplicación móvil que permita a los usuarios realizar pedidos d
 | Attribute         | Type          |
 | ----------------- | ------------- |
 | id_pago           |    INT        |
-| id_pedido         |    INT        |
-| id_metodo_pago    |    INT        |
 | fecha_pago        |    Date       |
 
 #### Reseña_Producto
@@ -137,8 +141,6 @@ Desarrollar una aplicación móvil que permita a los usuarios realizar pedidos d
 | Attribute         | Type          |
 | ----------------- | ------------- |
 | id_reseña         |     INT       |
-| id_producto       |     INT       |
-| id_usuario        |     INT       |
 | comentario        |     Text      |
 | Calificacion      |     INT       |
 
@@ -147,7 +149,6 @@ Desarrollar una aplicación móvil que permita a los usuarios realizar pedidos d
 | Attribute         | Type          |
 | ----------------- | ------------- |
 | id_direccion      |  INT          |
-| id_usuario        |  INT          |
 | direccion         |  Varchar(25)  |
 | ciudad            |  Varchar(15)  |
 | estado            |  Varchar(15)  |
@@ -165,11 +166,10 @@ Desarrollar una aplicación móvil que permita a los usuarios realizar pedidos d
 
 | Attribute         | Type          |
 | ----------------- | ------------- |
-| id_usuario        |  INT          |
-| Nombre            | Varchar(25)   |
-| Email             | Varchar(25)   |
-| Teléfono          | Varchar(25)   |
-| Dirección         |  Text         |
+| id_cupon          |  INT          |
+| codigo            | Varchar(25)   |
+| descuento         | Varchar(25)   |
+| fecha_vencimiento | Varchar(25)   |
 
 #### Restaurantes
 
@@ -184,17 +184,40 @@ Desarrollar una aplicación móvil que permita a los usuarios realizar pedidos d
 | Attribute         | Type          |
 | ----------------- | ------------- |
 | id_inventario     |     INT       |
-| id_producto       |     INT       |
 | Cantidad          |     INT       |
+
+#### Especificaciones
+
+| Attribute         | Type          |
+| ----------------- | ------------- |
+| id_especificacion |     INT       |
+| Nombre            |     INT       |
+| Descripción       |     INT       |
+
+#### Registro
+
+| Attribute         | Type          |
+| ----------------- | ------------- |
+| id_registro       |     INT       |
+| id_usuario        |     INT       |
+| Nombre            |    Varchar(25)    |
+| correo            |    Varchar(25)    |
+| contraseña        |    Varchar(25)    |
+| direccion         |    Varchar(45)    |
+| telefono          |    Varchar(15)    |
+
+
 
 ## Relaciones entre tablas
 
 - **Usuarios** esta relacionada con:
+  -Carrito
   - Direccion_Envio
   - Cupones
   - Repartidores
   - Registro
-  - 
+  - Reseña_Producto
+  - Historial_pedido
 
 - **Repartidores** esta relacionada con:
   - Usuarios
