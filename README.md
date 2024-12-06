@@ -525,15 +525,15 @@ CREATE TABLE Restaurantes_has_Productos (
 
 ## Script de Consultas SELECT para Oracle DB
 ```sql
--- ============================================
+
 -- 1. Selección Básica con DISTINCT
--- ============================================
+
 SELECT DISTINCT nombre_categoria
 FROM Categoria;
 
--- ============================================
+
 -- 2. Agregaciones con COUNT, AVG, MIN, MAX, SUM
--- ============================================
+
 SELECT 
     COUNT(*) AS total_productos,
     AVG(precio) AS precio_promedio,
@@ -542,46 +542,46 @@ SELECT
     SUM(stock) AS stock_total
 FROM Productos;
 
--- ============================================
+
 -- 3. Filtrado con WHERE y Operadores Lógicos
--- ============================================
+
 SELECT nombre, precio, stock
 FROM Productos
 WHERE precio > 50 AND stock < 100;
 
--- ============================================
+
 -- 4. Ordenamiento con ORDER BY y DESC
--- ============================================
+
 SELECT nombre_producto, precio
 FROM Productos
 ORDER BY precio DESC;
 
--- ============================================
+
 -- 5. Agrupamiento con GROUP BY y HAVING
--- ============================================
+
 SELECT id_categoria, COUNT(*) AS total_productos
 FROM Productos
 GROUP BY id_categoria
 HAVING COUNT(*) > 10;
 
--- ============================================
+
 -- 6. Unión de Tablas con INNER JOIN
--- ============================================
+
 SELECT u.nombre, p.nombre_producto, p.precio
 FROM Usuarios u
 INNER JOIN Pedidos_has_Usuarios pu ON u.id_usuario = pu.Usuarios_id_usuario
 INNER JOIN Pedidos p ON pu.Pedidos_id_pedido = p.id_pedido;
 
--- ============================================
+
 -- 7. Unión de Tablas con LEFT JOIN
--- ============================================
+
 SELECT u.nombre, r.estatus
 FROM Usuarios u
 LEFT JOIN Repartidores r ON u.id_usuario = r.id_usuario;
 
--- ============================================
+
 -- 8. Subconsulta en la Cláusula WHERE con EXISTS
--- ============================================
+
 SELECT nombre_producto, precio
 FROM Productos p
 WHERE EXISTS (
@@ -590,24 +590,24 @@ WHERE EXISTS (
     WHERE c.id_producto = p.id_producto
 );
 
--- ============================================
+
 -- 9. Subconsulta en la Cláusula SELECT
--- ============================================
+
 SELECT 
     nombre_producto,
     precio,
     (SELECT AVG(precio) FROM Productos) AS precio_promedio_general
 FROM Productos;
 
--- ============================================
+
 -- 10. Uso de Funciones de Cadena como UPPER y LOWER
--- ============================================
+
 SELECT UPPER(nombre) AS nombre_mayusculas, LOWER(direccion) AS direccion_minusculas
 FROM Usuarios;
 
--- ============================================
+
 -- 11. Uso de CASE para Lógica Condicional
--- ============================================
+
 SELECT nombre_producto,
     CASE 
         WHEN stock > 100 THEN 'Abundante'
@@ -616,38 +616,38 @@ SELECT nombre_producto,
     END AS nivel_stock
 FROM Productos;
 
--- ============================================
+
 -- 12. Filtrado con IN
--- ============================================
+
 SELECT nombre, email
 FROM Usuarios
 WHERE id_usuario IN (1, 2, 3, 4, 5);
 
--- ============================================
+
 -- 13. Filtrado con BETWEEN
--- ============================================
+
 SELECT nombre_producto, precio
 FROM Productos
 WHERE precio BETWEEN 20 AND 100;
 
--- ============================================
+
 -- 14. Manejo de NULL con NVL y COALESCE
--- ============================================
+
 SELECT nombre, NVL(direccion, 'No proporcionada') AS direccion,
        COALESCE(telefono, 'Sin teléfono') AS telefono
 FROM Usuarios;
 
--- ============================================
+
 -- 15. Uso de Funciones de Fecha como TRUNC y ADD_MONTHS
--- ============================================
+
 SELECT id_pedido, fecha_pedido, 
        TRUNC(fecha_pedido, 'MONTH') AS inicio_mes,
        ADD_MONTHS(fecha_pedido, 1) AS siguiente_mes
 FROM Pedidos;
 
--- ============================================
+
 -- 16. Uso de Window Functions como ROW_NUMBER y RANK
--- ============================================
+
 SELECT 
     nombre_producto,
     precio,
@@ -655,9 +655,9 @@ SELECT
     RANK() OVER (ORDER BY precio DESC) AS rango_precio
 FROM Productos;
 
--- ============================================
+
 -- 17. Uso de Common Table Expressions (WITH)
--- ============================================
+
 WITH Productos_Categoria AS (
     SELECT p.nombre_producto, c.nombre_categoria
     FROM Productos p
@@ -667,9 +667,9 @@ SELECT nombre_categoria, COUNT(*) AS total_productos
 FROM Productos_Categoria
 GROUP BY nombre_categoria;
 
--- ============================================
+
 -- 18. Uso de PIVOT
--- ============================================
+
 SELECT *
 FROM (
     SELECT c.nombre_categoria, p.precio
@@ -681,9 +681,9 @@ PIVOT (
     FOR nombre_categoria IN ('Bebidas', 'Snacks', 'Postres')
 );
 
--- ============================================
+
 -- 19. Uso de UNION y UNION ALL
--- ============================================
+
 -- UNION elimina duplicados
 SELECT nombre, email FROM Usuarios
 WHERE direccion LIKE '%Madrid%'
@@ -702,23 +702,23 @@ UNION ALL
 SELECT nombre, email FROM Usuarios
 WHERE direccion LIKE '%Barcelona%';
 
--- ============================================
+
 -- 20. Filtrado con LIKE y Wildcards
--- ============================================
+
 SELECT nombre_producto, descripcion
 FROM Productos
 WHERE descripcion LIKE '%delicioso%';
 
--- ============================================
+
 -- 21. Uso de REGEXP_LIKE para Filtrado Avanzado
--- ============================================
+
 SELECT nombre, telefono
 FROM Usuarios
 WHERE REGEXP_LIKE(telefono, '^\+?[0-9]{10,15}$');
 
--- ============================================
+
 -- 22. Uso de EXISTS con Subconsultas Correlacionadas
--- ============================================
+
 SELECT u.nombre, u.email
 FROM Usuarios u
 WHERE EXISTS (
@@ -727,18 +727,18 @@ WHERE EXISTS (
     WHERE c.id_usuario = u.id_usuario AND c.cantidad > 5
 );
 
--- ============================================
+
 -- 23. Uso de CONNECT BY para Consultas Jerárquicas
--- ============================================
+
 -- *Nota:* Este es un ejemplo genérico. Asegúrate de tener una estructura jerárquica en tu tabla.
 SELECT LEVEL, nombre_restaurante, id_restaurante
 FROM Restaurantes
 START WITH id_restaurante = 1
 CONNECT BY PRIOR id_restaurante = parent_id_restaurante;
 
--- ============================================
+
 -- 24. Uso de CTE Recursivas
--- ============================================
+
 -- *Nota:* Oracle soporta CTEs recursivas usando WITH y CONNECT BY. Ajusta según tu estructura.
 WITH Categoria_Hierarchy AS (
     SELECT id_categoria, nombre_categoria, NULL AS parent_id
@@ -751,9 +751,9 @@ WITH Categoria_Hierarchy AS (
 )
 SELECT * FROM Categoria_Hierarchy;
 
--- ============================================
+
 -- 25. Uso de FETCH y OFFSET para Paginación
--- ============================================
+
 SELECT nombre_producto, precio
 FROM Productos
 ORDER BY precio DESC
