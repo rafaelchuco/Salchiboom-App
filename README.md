@@ -25,6 +25,7 @@
       - [Restaurantes](#restaurantes)
       - [Inventario](#inventario)
   - [Relaciones entre tablas](#relaciones-entre-tablas)
+  - [Diagrama Entidad-Relación](#diagrama-entidad-relación)
 
 ## Objetivos
 ### Objetivo general
@@ -165,7 +166,6 @@ Desarrollar una aplicación móvil que permita a los usuarios realizar pedidos d
 |  id_restaurante   |  INT          |
 |  Nombre           |  Varchar(10)  |
 |  Descripción      |  clob         |
-|                   |               |
 
 #### Inventario
 | Attribute         | Type          |
@@ -203,3 +203,5 @@ Desarrollar una aplicación móvil que permita a los usuarios realizar pedidos d
 - **Restaurantes** esta relacionada con:
 
 - **Inventario** esta relacionada con:
+
+## Diagrama Entidad-Relación
