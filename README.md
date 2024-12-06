@@ -5,10 +5,11 @@
 ### Tabla de contenido
 - [🍔SalchiBoom🍔](#salchiboom)
     - [Tabla de contenido](#tabla-de-contenido)
-  - [📄Descripción](#descripción)
+  - [Objetivos](#objetivos)
+    - [Objetivo general](#objetivo-general)
+    - [Objetivos específicos](#objetivos-específicos)
   - [👨‍💻Tecnologías utilizadas](#tecnologías-utilizadas)
-  - [Entidades](#entidades)
-      - [salchiboom](#salchiboom-1)
+  - [Tablas y Atributos](#tablas-y-atributos)
       - [Usuarios](#usuarios)
       - [Repartidores](#repartidores)
       - [Productos](#productos)
@@ -23,10 +24,17 @@
       - [Cupones](#cupones)
       - [Restaurantes](#restaurantes)
       - [Inventario](#inventario)
+  - [Relaciones entre tablas](#relaciones-entre-tablas)
 
-## 📄Descripción
-Este es una aplicación de entrega de comida llamada **SalchiBoom**. Especializada en ofrecer hamburguesas de alta calidad. Nuestra misión es proporcionar **experiencias sabrosas** y **momentos felices** para nuestros usuarios, con un solo clic.
-
+## Objetivos
+### Objetivo general
+Desarrollar una aplicación móvil que permita a los usuarios realizar pedidos de comida rápida de manera eficiente, con una experiencia de usuario optimizada que permita la programación de pedidos y el seguimiento en tiempo real.
+### Objetivos específicos
+- Ofrecer una interfaz de usuario intuitiva y de fácil acceso para usuarios de diferentes edades y niveles de conocimiento tecnológico.
+  
+- Integrar un sistema de pago en línea seguro, rápido y versátil para facilitar las transacciones.
+  
+- Implementar un sistema de seguimiento en tiempo real de los pedidos, desde su preparación hasta la entrega.
 ## 👨‍💻Tecnologías utilizadas
 <table>
   <thead>
@@ -34,6 +42,7 @@ Este es una aplicación de entrega de comida llamada **SalchiBoom**. Especializa
       <th>Figma</th>
       <th>Oracle</th>
       <th>MySQL Workbench</th>
+      <th>Google Docs</th>
     </tr>
   </thead>
   <tbody>
@@ -46,17 +55,13 @@ Este es una aplicación de entrega de comida llamada **SalchiBoom**. Especializa
     <td>
         <img src="https://wizcase.com/wp-content/uploads/2022/02/MySQL-Workbench-logo.png"width="100%" />
     </td>
+    <td>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Google_Docs_2020_Logo.svg/1489px-Google_Docs_2020_Logo.svg.png"width="100%"/>
+    </td>
   </tbody>
 </table>
 
-## Entidades
-#### salchiboom
-| Attribute         | Type          |
-| ----------------- | ------------- |
-|                   |               |
-|                   |               |
-|                   |               |
-|                   |               |
+## Tablas y Atributos
 
 #### Usuarios
 | Attribute         | Type          |
@@ -167,3 +172,33 @@ Este es una aplicación de entrega de comida llamada **SalchiBoom**. Especializa
 | ----------------- | ------------- |
 |                   |               |
 |                   |               |
+
+## Relaciones entre tablas
+
+**Usuarios** esta relacionada con:
+
+**Repartidores** esta relacionada con:
+
+**Productos** esta relacionada con:
+
+**Categoria** esta relacionada con:
+
+**Pedidos** esta relacionada con:
+
+**Carrito** esta relacionada con:
+
+**Metodo_Pago** esta relacionada con:
+
+**Historial_Pago** esta relacionada con:
+
+**Reseña_Producto** esta relacionada con:
+
+**Direccion_Envio** esta relacionada con:
+
+**Historial_Pedido** esta relacionada con:
+
+**Cupones** esta relacionada con:
+
+**Restaurantes** esta relacionada con:
+
+**Inventario** esta relacionada con:
