@@ -11,7 +11,6 @@
   - [👨‍💻Tecnologías utilizadas](#tecnologías-utilizadas)
   - [Tablas y Atributos](#tablas-y-atributos)
       - [Usuarios](#usuarios)
-      - [Usuarios](#usuarios-1)
       - [Repartidores](#repartidores)
       - [Productos](#productos)
       - [Categoria](#categoria)
@@ -65,7 +64,6 @@ Desarrollar una aplicación móvil que permita a los usuarios realizar pedidos d
 ## Tablas y Atributos
 
 #### Usuarios
-#### Usuarios
 | Attribute         | Type          |
 | ----------------- | ------------- |
 | id_usuario        |  INT          |
@@ -80,7 +78,6 @@ Desarrollar una aplicación móvil que permita a los usuarios realizar pedidos d
 | Id_repartidor     |     INT       |
 | id_usuario        |     INT       |
 | estatus           |     Enum      |
-|                   |               |
 
 #### Productos
 | Attribute         | Type          |
@@ -96,8 +93,6 @@ Desarrollar una aplicación móvil que permita a los usuarios realizar pedidos d
 | ----------------- | ------------- |
 | id_categoria      | INT           |
 | Nombre            |  Charchar(25) |
-|                   |               |
-|                   |               |
 
 #### Pedidos
 | Attribute         | Type          |
@@ -154,7 +149,6 @@ Desarrollar una aplicación móvil que permita a los usuarios realizar pedidos d
 | id_historial      |    INT        |
 | id_pedido         |    INT        |
 | estatus           |    INT        |
-|                   |               |
 
 #### Cupones
 | Attribute         | Type          |
@@ -182,30 +176,30 @@ Desarrollar una aplicación móvil que permita a los usuarios realizar pedidos d
 
 ## Relaciones entre tablas
 
-**Usuarios** esta relacionada con:
+- **Usuarios** esta relacionada con:
 
-**Repartidores** esta relacionada con:
+- **Repartidores** esta relacionada con:
 
-**Productos** esta relacionada con:
+- **Productos** esta relacionada con:
 
-**Categoria** esta relacionada con:
+- **Categoria** esta relacionada con:
 
-**Pedidos** esta relacionada con:
+- **Pedidos** esta relacionada con:
 
-**Carrito** esta relacionada con:
+- **Carrito** esta relacionada con:
 
-**Metodo_Pago** esta relacionada con:
+- **Metodo_Pago** esta relacionada con:
 
-**Historial_Pago** esta relacionada con:
+- **Historial_Pago** esta relacionada con:
 
-**Reseña_Producto** esta relacionada con:
+- **Reseña_Producto** esta relacionada con:
 
-**Direccion_Envio** esta relacionada con:
+- **Direccion_Envio** esta relacionada con:
 
-**Historial_Pedido** esta relacionada con:
+- **Historial_Pedido** esta relacionada con:
 
-**Cupones** esta relacionada con:
+- **Cupones** esta relacionada con:
 
-**Restaurantes** esta relacionada con:
+- **Restaurantes** esta relacionada con:
 
-**Inventario** esta relacionada con:
+- **Inventario** esta relacionada con:
